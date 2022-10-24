@@ -4,7 +4,7 @@ module.exports = () => {
 	const environment = process.env.NODE_ENV
 
   Sentry.AWSLambda.init({
-    dsn: process.env.SENTRY_DSN_SERVICE_REPROCESS_ERROR,
+    dsn: process.env.SENTRY_DSN_SERVICE,
     environment,
     // Only enable Sentry monitoring on certain environments
     enabled: ['staging', 'production'].includes(environment),
